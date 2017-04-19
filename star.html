@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>类似baidu 5星效果可以有半星等</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <style type="text/css">
+    /*星星*/
+    .c-icon {
+        float: left;
+        height: 30px;
+        font-style: normal;
+        overflow: hidden;
+    }
+    
+    .c-icon-star-gray {
+        position: relative;
+        width: 151px;
+        background-image: url(images/ic_star2.png);
+    }
+    
+    .c-icon-star-gray .c-icon-star {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(images/ic_star1.png);
+    }
+    
+    .star .score {
+        float: left;
+        margin-left: 5px;
+        color: #ff8500;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    </style>
+</head>
+
+<!-- 在线下载5star库 http://www.iconfont.cn/plus/search/index?searchType=icon&q=5%20star -->
+<body>
+    <div class="star clearfix">
+        <i class="c-icon c-icon-star-gray"><i class="c-icon c-icon-star" style="width:35%"></i></i><span class="score">3.0</span>
+    </div>
+</body>
+
+</html>

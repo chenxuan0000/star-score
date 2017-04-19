@@ -1,0 +1,121 @@
+.checkmark {
+    position: relative;
+    width: 150px;
+    min-height: 30px;
+}
+
+.checkmark>input {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    outline: none;
+    filter: alpha(opacity=0);
+}
+
+.checkmark>input.radio2 {
+    left: 30px;
+}
+
+.checkmark>input.radio3 {
+    left: 60px;
+}
+
+.checkmark>input.radio4 {
+    left: 90px;
+}
+
+.checkmark>input.radio5 {
+    left: 120px;
+}
+
+.checkmark>label {
+    float: right;
+    width: 30px;
+    height: 30px;
+    color: transparent;
+    outline: none;
+    background-image: url(../images/icons-checkmark.png);
+    background-repeat: no-repeat;
+}
+
+.checkmark>label.selected {
+    background-position: 0 -30px;
+}
+
+.checkmark>input:checked ~label,
+.checkmark>input:focus ~label,
+.checkmark>input:hover ~label {
+    background-position: 0 -30px;
+}
+
+.checkmark>label:before {
+    position: absolute;
+    top: 1px;
+    right: -33px;
+    display: none;
+    content: ' ';
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icons-checkmark.png);
+    background-repeat: no-repeat;
+    background-position: 0 -60px;
+}
+
+.checkmark>input:checked +label:before {
+    display: block;
+    display: none\9;
+    animation-name: tip;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+.checkmark>input:checked +label>.goal {
+    display: block;
+    animation-name: score;
+    animation-duration: .9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes tip {
+    0% {
+        transform: translateX(-15px);
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        transform: none;
+    }
+    80% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes score {
+    0% {
+        transform: translateX(-15px);
+    }
+    60% {
+        opacity: 0;
+    }
+    70% {
+        transform: none;
+    }
+    80% {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.checkmark .goal {
+    position: absolute;
+    top: 1px;
+    right: -33px;
+    color: #ff8500;
+    font-size: 18px;
+    line-height: 30px;
+}

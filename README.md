@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="zh">
+## 纯css实现的star click 评分  基于jq做了向下兼容
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>CSS3实现的动画效果星级评分(ie jq向下兼容)</title>
-    <link rel="stylesheet" type="text/css" href="css/common.css" />
-    <link rel="stylesheet" type="text/css" href="css/starability.css" />
-    <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
-</head>
+```html
 
-<body>
-    <section>
+<link rel="stylesheet" type="text/css" href="css/starability.css" /> //css
+<section>
         <div class="checkmark" id="checkmark">
             <input type="radio" title="Amazing" name="rating" value="5.0" class="radio5" />
             <label></label>
@@ -24,9 +16,13 @@
             <input type="radio" title="Terrible" name="rating" value="1.0" class="radio1" />
             <label></label>
         </div>
-    </section>
-</body>
-<script type="text/javascript">
+</section>
+
+```
+
+```javascript
+//向下兼容处理 ie8
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script> 
 (function($) {
     // 加上评分数
     var $checkmark = $("#checkmark");
@@ -61,6 +57,5 @@
     }
 
 })(jQuery);
-</script>
 
-</html>
+```

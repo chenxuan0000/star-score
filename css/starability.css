@@ -1,3 +1,7 @@
+section {
+    margin-top: 40px;
+    margin-left: 50px;
+}
 .checkmark {
     position: relative;
     width: 150px;
